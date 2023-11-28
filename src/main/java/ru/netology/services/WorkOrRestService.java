@@ -10,8 +10,8 @@ public class WorkOrRestService {
                 vacationManth--;
                 cash = cash + income - expense;
             } else {
-                int vacationExpense = (cash - expense) - ((cash - expense) / 3);
-                cash = cash - expense - vacationExpense;
+                int vacationExpense = cash - ((cash - expense) / 3);
+                cash = cash - vacationExpense;
             }
         }
         return vacationManth;
